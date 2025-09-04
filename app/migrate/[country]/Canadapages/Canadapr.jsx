@@ -64,7 +64,7 @@ const CanadaMigration = () => {
         <li>
           <strong>Education Excellence –</strong> Affordable, globally
           recognized institutions make it the ideal destination to{" "}
-          <Link href="https://vjcoverseas.com/study-abroad/canada" className="text-orange-600 font-bold">
+          <Link href="https://www.vjcoverseas.com/study-abroad/canada" className="text-orange-600 font-bold">
             Study in Canada
           </Link>
           .
