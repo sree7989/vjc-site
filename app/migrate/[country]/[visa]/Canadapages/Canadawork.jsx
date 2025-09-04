@@ -74,7 +74,7 @@ const GermanyWorkVisa = () => {
         <li><strong>Eligibility Assessment:</strong> We begin with a thorough evaluation of your qualifications, experience, and job offer to determine which visa category is right for you.</li>
         <li><strong>Documentation Support:</strong> We assist you in gathering all the necessary documents, including proof of qualifications, job offer letters, and other supporting paperwork.</li>
         <li><strong>Application Submission & Follow-up:</strong> We submit your application on your behalf, ensuring all forms are correctly completed and submitted within deadlines. Our team will follow up with immigration authorities to track your application status.</li>
-        <li><strong>Pre-Departure Assistance:</strong> Once your visa is approved, we help you prepare for your move, providing guidance on accommodation, healthcare, and other relocation needs. For students interested, we also support those who wish to <Link href="https://vjcoverseas.com/study-abroad/canada" className="text-orange-600 font-bold">Study in Canada</Link> after their work experience abroad.</li>
+        <li><strong>Pre-Departure Assistance:</strong> Once your visa is approved, we help you prepare for your move, providing guidance on accommodation, healthcare, and other relocation needs. For students interested, we also support those who wish to <Link href="https://www.vjcoverseas.com/study-abroad/canada" className="text-orange-600 font-bold">Study in Canada</Link> after their work experience abroad.</li>
       </ul>
 
       <h2 className="text-1xl font-semibold mb-2" style={{ fontWeight: 'bold', color: 'black' }}>
