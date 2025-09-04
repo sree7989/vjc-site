@@ -155,10 +155,6 @@ const Denbusiness = () => {
           Your professional opportunities in Denmark are just one application away. Let <a href="https://www.vjcoverseas.com" style={{ color: "orange", fontWeight: "bold" }}>VJC Overseas</a> guide you with precision and care, from your Denmark Business Visa application to any future immigration goals.
         </p>
 
-        <p className="font-bold mb-6">
-          Contact us today at +91-9160449000 or visit www.vjcoverseas.com to get started.
-        </p>
-
         <hr style={{ borderColor: "black" }} className="mb-6" />
 
         <p>
