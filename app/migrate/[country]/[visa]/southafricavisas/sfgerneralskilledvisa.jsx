@@ -14,7 +14,7 @@ const Newzebusiness = () => {
                     Are you a skilled professional looking to build a successful career in South Africa? With the demand for highly qualified workers in various sectors, the South Africa Critical Skills Visa offers an excellent opportunity for professionals from across the globe, especially those from India, to live and work in this dynamic country.
                 </p>
                 <p className="text-lxl leading-relaxed mb-6">
-                    Whether you're seeking new career paths, entrepreneurial opportunities, or a peaceful retirement, South Africa welcomes skilled professionals, investors, families, and students from around the world. Partnering with the <Link href="https://vjcoverseas.com/" className="text-orange-500" style={{ textTransform: "capitalize", fontWeight: "normal", textDecoration: "none" }}>Best Visa Immigration Consultants</Link> ensures that every stage of your migration is handled with expert precision and up-to-date guidance.
+                    Whether you're seeking new career paths, entrepreneurial opportunities, or a peaceful retirement, South Africa welcomes skilled professionals, investors, families, and students from around the world. Partnering with the <Link href="https://www.vjcoverseas.com/" className="text-orange-500" style={{ textTransform: "capitalize", fontWeight: "normal", textDecoration: "none" }}>Best Visa Immigration Consultants</Link> ensures that every stage of your migration is handled with expert precision and up-to-date guidance.
                 </p>
                 <div className="flex justify-center items-center w-full">
                     <Image
