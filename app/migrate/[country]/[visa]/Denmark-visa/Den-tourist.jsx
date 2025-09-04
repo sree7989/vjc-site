@@ -173,7 +173,7 @@ const Dentourist = () => {
         <li>
           <b>Consultation: </b>Reach out to <b style={{ color: "black" }}>VJC Overseas</b> for a consultation. Our
           team will assess your eligibility and provide guidance on the
-          documentation required. If you plan to <a href="https://vjcoverseas.com/study-abroad/denmark" style={{ color: "orange", fontWeight: "bold" }}>Study in Denmark</a>, we can also guide you through that process.
+          documentation required. If you plan to <a href="https://www.vjcoverseas.com/study-abroad/denmark" style={{ color: "orange", fontWeight: "bold" }}>Study in Denmark</a>, we can also guide you through that process.
         </li>
         <li>
           <b>Document Submission: </b>Gather all necessary documents, including
