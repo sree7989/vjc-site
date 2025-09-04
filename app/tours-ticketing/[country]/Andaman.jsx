@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const AndamanTour = () => {
   return (
@@ -12,9 +13,8 @@ const AndamanTour = () => {
       <div className="flex flex-col md:flex-row items-start gap-6 mb-2">
         <div className="md:w-1/2 text-base text-justify leading-snug">
           <p>
-            The Andaman Islands, a tropical paradise nestled in the Bay of Bengal, beckon travelers with their crystal-clear waters, vibrant coral reefs, lush forests, and serene beaches. Whether you’re an adventure enthusiast eager to dive into the underwater world or a nature lover looking for tranquility, Andaman offers an unmatched getaway. Planning your trip? <span className="text-orange-500">VJC Overseas</span> is your trusted partner to assist you with the Andaman tourist permit process and provide affordable and customized tourist packages designed just for you.
+            The Andaman Islands, a tropical paradise nestled in the Bay of Bengal, beckon travelers with their crystal-clear waters, vibrant coral reefs, lush forests, and serene beaches. Whether you’re an adventure enthusiast eager to dive into the underwater world or a nature lover looking for tranquility, Andaman offers an unmatched getaway. Planning your trip? <Link href="https://www.vjcoverseas.com" className="text-orange-500 font-bold">Best Visa Immigration Consultants</Link> make your Andaman permit process smooth and offer well-designed tour packages to suit your needs.
           </p>
-         
         </div>
         <div className="md:w-1/2 w-full rounded-lg overflow-hidden">
           <Image
@@ -28,15 +28,17 @@ const AndamanTour = () => {
           />
         </div>
       </div>
-       <p className="mb-3">
-            As a reputed immigration consultancy, we make your travel documentation and itinerary planning seamless, ensuring a stress-free Andaman vacation.
-          </p>
+
+      <p className="mb-3">
+        As a reputed immigration consultancy, <span className="font-bold text-black">VJC Overseas</span> makes your travel documentation and itinerary planning seamless, ensuring a stress-free Andaman vacation.
+      </p>
+
       <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">What is the Andaman Tourist Permit?</h2>
       <p className="mb-5 text-base text-justify leading-snug">
         Unlike international tourist visas, Indian nationals do not require a visa to visit the Andaman Islands but must obtain a <strong>Restricted Area Permit (RAP)</strong> or <strong>Protected Area Permit (PAP)</strong> to enter this sensitive zone. This permit is mandatory for all domestic and international tourists except residents of certain Indian states.
       </p>
       <p className="mb-5 text-base text-justify leading-snug">
-        At <span className="text-orange-500">VJC Overseas</span>, we guide you through the permit application process, making sure you comply with all regulations and avoid any last-minute hassles.
+        At <span className="font-bold text-black">VJC Overseas</span>, we guide you through the permit application process, making sure you comply with all regulations and avoid any last-minute hassles.
       </p>
 
       <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">Andaman Tourist Permit Requirements</h2>
@@ -49,7 +51,7 @@ const AndamanTour = () => {
         <li>For foreign nationals, a valid Indian visa is mandatory in addition to the RAP</li>
       </ul>
       <p className="mb-5 text-base text-justify leading-snug">
-        Our team at <span className="text-orange-500">VJC Overseas</span> assists you in compiling these documents and submits the application on your behalf for quick processing.
+        Our team at <Link href="https://www.vjcoverseas.com/tours-ticketing" className="text-orange-500 font-bold">Tours and Ticketing Services</Link> assists you in compiling these documents and submits the application on your behalf for quick processing.
       </p>
 
       <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">How VJC Overseas Simplifies Your Andaman Permit Process</h2>
@@ -66,7 +68,7 @@ const AndamanTour = () => {
 
       <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">Affordable Andaman Tourist Packages</h2>
       <p className="mb-5 text-base text-justify leading-snug">
-        Along with permit assistance, <span className="text-orange-500">VJC Overseas</span> offers pocket-friendly and customizable Andaman tour packages that showcase the best of these islands.
+        Along with permit assistance, <Link href="https://www.vjcoverseas.com/tours-ticketing/andaman" className="text-orange-500 font-bold">Andaman Beach Holidays</Link> offers pocket-friendly and customizable tour packages that showcase the best of these islands.
       </p>
       <ul className="list-disc list-inside mb-5 text-base text-justify space-y-1.5">
         <li>Flight bookings and airport transfers</li>
@@ -81,19 +83,21 @@ const AndamanTour = () => {
         Whether you are traveling solo, with family, or in a group, we customize packages to suit your preferences and budget.
       </p>
 
-      <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">Why Choose <span className="text-orange-500">VJC Overseas</span>?</h2>
+      <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">Why Choose <span className="font-bold text-black">VJC Overseas</span>?</h2>
       <ul className="list-disc list-inside mb-5 text-base text-justify space-y-1.5">
         <li>Experienced and trusted immigration consultancy</li>
         <li>Smooth permit processing with high success rates</li>
         <li>Transparent pricing with no hidden charges</li>
         <li>Tailor-made travel packages for all budgets</li>
         <li>Dedicated customer support throughout your travel journey</li>
+        <li>Guidance from <Link href="https://www.vjcoverseas.com/visit-visas" className="text-orange-500 font-bold">Visit Visa Consultants</Link> for any international travel queries</li>
       </ul>
 
       <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">Start Your Andaman Journey Today</h2>
-      <p className="mb-5 text-base text-justify leading-snug">
-        With <span className="text-orange-500">VJC Overseas</span>, the Andaman tourist permit process is simple and efficient, and your travel arrangements are perfectly planned. Contact us today to begin your permit application and discover affordable Andaman tour packages crafted just for you.
-      </p>
+     <p className="mb-5 text-base text-justify leading-snug">
+  With <Link href="https://www.vjcoverseas.com" className="text-orange-500 font-bold">VJC Overseas</Link>, the Andaman tourist permit process is simple and efficient, and your travel arrangements are perfectly planned. Contact us today to begin your permit application and discover affordable Andaman tour packages crafted just for you.
+</p>
+
       <p className="text-base font-semibold text-center md:text-left text-orange-600">
         Reach out now and make your dream Andaman holiday a reality!
       </p>
