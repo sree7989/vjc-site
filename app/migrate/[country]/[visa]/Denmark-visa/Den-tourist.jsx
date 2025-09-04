@@ -197,17 +197,7 @@ const Dentourist = () => {
         make sure your Denmark Tourist Visa application is handled
         efficiently and professionally.
       </p>
-      <div className="mb-6 ml-8">
-        <p>
-          <b>Phone:</b>+91-9160449000
-        </p>
-        <p>
-          <b>Email:</b>info@vjcoverseas.com
-        </p>
-        <p>
-          <b>Website: </b>www.vjcoverseas.com
-        </p>
-      </div>
+      
       <p className="mb-8">
         Let <b style={{ color: "black" }}>VJC Overseas</b> be your trusted partner in exploring the magic of
         Denmark!
