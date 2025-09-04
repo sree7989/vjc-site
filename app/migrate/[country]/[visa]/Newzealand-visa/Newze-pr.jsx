@@ -166,11 +166,7 @@ const Newzepr = () => {
         contact <b>VJC Overseas</b> today. Our team is here to assist you with all aspects of the application process,
         from eligibility assessment to submission, ensuring that you achieve your immigration goals.
       </p>
-      <h3 className="text-black m-2 font-bold text-lg mb-6">Contact Us</h3>
-      <p className="mb-6">
-        For more information or to schedule a consultation with one of our immigration experts, call us at{" "}
-        <b>+91-9160449000</b> or email us about info@vjcoverseas.com.
-      </p>
+      
       <p className="mb-6">
         Start your journey to New Zealand today with <b>VJC Overseas</b> – your trusted
         immigration partner.
