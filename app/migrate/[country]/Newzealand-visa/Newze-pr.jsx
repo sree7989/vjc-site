@@ -115,15 +115,7 @@ const Newzepr = () => {
         , our experienced team will guide you at every step. Now is the perfect time to begin your journey to a better life in New Zealand. Get a <b className="text-sky-600">free eligibility check</b>, explore your best visa options, and let our experts take care of the rest.
       </p>
 
-      <h3 className='text-orange-600 font-bold text-lg mb-3'>Contact Us</h3>
-      <p className='mb-6 text-gray-700'>
-        📞 Call us: <b>+91-9160449000</b> <br />
-        📧 Email: <b>info@vjcoverseas.com</b>
-      </p>
-
-      <p className="text-sm italic text-gray-500">
-        Disclaimer: Immigration policies may change. Please consult with our experts or official New Zealand immigration resources for the latest updates.
-      </p>
+      
     </div>
   )
 }
