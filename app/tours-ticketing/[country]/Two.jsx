@@ -1,6 +1,5 @@
 "use client";
 
-
 import React, { useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { motion } from "framer-motion";
@@ -30,6 +29,10 @@ import Maldives from "./Maldives";
 import Azerbaijan from "./Azerbaijan";
 import Southafrica from "./Southafrica";
 import Japan from "./Japan";
+import ModalFormWithPopup from "../../Popup/Popup"; // adjust path if needed
+
+import MaltaImageContent from "../../Popup/Toursandtickeing";
+
 const visaData = [
     { name: "Europe Tours and Ticketing", image: "/europe-tour.jpg", path: "/tours-ticketing/europe" },
     { name: "USA Tours and Ticketing", image: "/usa-tour-places.jpeg", path: "/tours-ticketing/usa" },
@@ -54,6 +57,7 @@ const visaData = [
     { name: "South Africa Tours and Ticketing", image: "/south-africa-tour-packages.jpg", path: "/tours-ticketing/south-africa" },
     { name: "Japan Tours and Ticketing", image: "/japan-tourist-places.jpg", path: "/tours-ticketing/japan" },
 ];
+
 const defaultVisa = {
   name: "Tours and Ticketing",
   path: "/tours-ticketing",
@@ -64,7 +68,8 @@ const Migrate = () => {
   const router = useRouter();
   const pathname = usePathname();
   const [selectedVisa, setSelectedVisa] = useState(defaultVisa);
-
+  const [isOpen, setIsOpen] = useState(false);
+  
   useEffect(() => {
     const foundVisa = visaData.find((visa) => visa.path === pathname);
     if (foundVisa) {
@@ -99,21 +104,19 @@ const Migrate = () => {
                 {selectedVisa.name}
               </h1>
               <div className="mt-4 max-w-xl">
-  <p className="text-base sm:text-lg lg:text-xl text-white">
-    "Kickstart your journey with seamless tours & ticketing. Choose your destination, and we’ll take care of the rest!"
-  </p>
+                <p className="text-base sm:text-lg lg:text-xl text-white">
+                  "Kickstart your journey with seamless tours & ticketing. Choose your destination, and we’ll take care of the rest!"
+                </p>
 
+                <button
+                  className="mt-4 relative inline-block px-8 py-3 font-bold text-white bg-gradient-to-r from-orange-500 via-black to-orange-500 rounded-xl overflow-hidden group shadow-xl animate-pulse-glow"
+                  onClick={() => setIsOpen(true)}
+                >
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-orange-400 via-black to-orange-600 transition-transform duration-500 ease-in-out group-hover:bg-blue-400 rounded-xl animate-shimmer"></span>
+                  <span className="relative z-10">Apply Now</span>
+                </button>
 
-<Link href="/contact-us">
-  <button
-    className="mt-6 px-6 py-3 bg-orange-600 text-white text-sm sm:text-base font-semibold rounded-full shadow-md transition duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 hover:shadow-xl"
-  >
-    Apply Now
-  </button>
-</Link>
-
-</div>
-
+              </div>
             </motion.div>
 
             <div className="w-full lg:w-1/2 mt-8 lg:mt-16">
@@ -125,44 +128,55 @@ const Migrate = () => {
 
       {/* ===== BOTTOM SECTION ===== */}
       <div className="relative z-10 w-full bg-white px-4 sm:px-6 lg:px-12 pt-10 pb-16">
-        <div className="flex justify-center md:justify-start mb-8 mr-8 md:ml-16">
-          <h2 className="text-3xl font-bold text-gray-800 bg-gradient-to-r from-orange-500 to-black bg-clip-text text-transparent">
-            <span className="block md:text-left text-center">From tickets to</span>
-            <span className="block text-center"> tales, we deliver!</span>
-          </h2>
-        </div>
-
         <div className="w-full flex flex-col md:flex-row gap-8 md:gap-10 items-start">
-          {/* Visa Buttons Section */}
-          <div className="w-full md:w-1/3">
-           {visaData.map((visa) => (
-  <Link
-    key={visa.path}
-    href={visa.path}
-    className={`block mb-4 w-full no-underline`}
-  >
-    <div
-      className={`w-full flex items-center justify-between text-lg font-semibold px-6 py-4 rounded-xl transition duration-300 shadow-lg ${
-        selectedVisa.path === visa.path
-          ? "bg-orange-500 text-white border-orange-500 shadow-orange-400"
-          : "bg-transparent text-black border border-orange-500 hover:bg-orange-500 hover:text-white"
-      } transform hover:scale-105`}
-    >
-      {visa.name}
-      <ArrowRight className="w-6 h-6" />
-    </div>
-  </Link>
-))}
+          {/* Left: Heading + Visa Buttons Section */}
+          <div className="w-full md:w-1/3 order-2 md:order-1">
+            <div className="flex justify-center md:justify-start mb-8 mr-8 md:ml-16">
+              <h2 className="text-3xl font-bold text-gray-800 bg-gradient-to-r from-orange-500 to-black bg-clip-text text-transparent">
+                <span className="block md:text-left text-center">From tickets to</span>
+                <span className="block text-center"> tales, we deliver!</span>
+              </h2>
+            </div>
+
+            {/* Apply Button for Small Screens Only */}
+            <div className="block lg:hidden mb-6 text-center">
+              <button
+                className="mt-2 relative inline-block px-8 py-3 font-bold text-white bg-gradient-to-r from-orange-500 via-black to-orange-500 rounded-xl overflow-hidden group shadow-xl animate-pulse-glow"
+                onClick={() => setIsOpen(true)}
+              >
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-orange-400 via-black to-orange-600 transition-transform duration-500 ease-in-out group-hover:bg-blue-400 rounded-xl animate-shimmer"></span>
+                <span className="relative z-10">Apply Now</span>
+              </button>
+            </div>
+
+            {visaData.map((visa) => (
+              <Link
+                key={visa.path}
+                href={visa.path}
+                className={`block mb-4 w-full no-underline`}
+              >
+                <div
+                  className={`w-full flex items-center justify-between text-lg font-semibold px-6 py-4 rounded-xl transition duration-300 shadow-lg ${
+                    selectedVisa.path === visa.path
+                      ? "bg-orange-500 text-white border-orange-500 shadow-orange-400"
+                      : "bg-transparent text-black border border-orange-500 hover:bg-orange-500 hover:text-white"
+                  } transform hover:scale-105`}
+                >
+                  {visa.name}
+                  <ArrowRight className="w-6 h-6" />
+                </div>
+              </Link>
+            ))}
           </div>
 
-          {/* Visa Info Content Box */}
+          {/* Right: Visa Info Content Box */}
           <div
-            className="w-full md:w-2/3 p-4 md:p-6 rounded-xl border border-gray-300 shadow-md relative md:-mt-32 sm:-mt-20 mt-0"
+            className="w-full md:w-2/3 p-4 md:p-6 rounded-xl border border-gray-300 shadow-md relative mt-6 order-1 md:order-2"
             style={{ maxHeight: "1800px", minHeight: "1300px", overflowY: "auto" }}
           >
             {selectedVisa.path === defaultVisa.path ? (
               <div className="text-gray-700 text-lg leading-relaxed">
-             "Kickstart your journey with seamless tours & ticketing. Choose your destination, and we’ll take care of the rest!"
+                "Kickstart your journey with seamless tours & ticketing. Choose your destination, and we’ll take care of the rest!"
               </div>
             ) : selectedVisa.path === "/tours-ticketing/canada" ? (
               <Canada />
@@ -176,7 +190,6 @@ const Migrate = () => {
               <Italy />
             ) : selectedVisa.path === "/tours-ticketing/turkey" ? (
               <Turckey />
-           
             ) : selectedVisa.path === "/tours-ticketing/bali" ? (
               <Bali />
             ) : selectedVisa.path === "/tours-ticketing/usa" ? (
@@ -208,8 +221,8 @@ const Migrate = () => {
             ) : selectedVisa.path === "/tours-ticketing/azerbaijan" ? (
               <Azerbaijan />
             ) : selectedVisa.path === "/tours-ticketing/japan" ? (
-            <Japan />
-            ): selectedVisa.path === "/tours-ticketing/south-africa" ? (
+              <Japan />
+            ) : selectedVisa.path === "/tours-ticketing/south-africa" ? (
               <Southafrica />
             ) : (
               <div className="text-gray-700 text-lg leading-relaxed">
@@ -219,6 +232,12 @@ const Migrate = () => {
           </div>
         </div>
       </div>
+      
+      <ModalFormWithPopup
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        customContent={<MaltaImageContent />}
+      />
     </div>
   );
 };
