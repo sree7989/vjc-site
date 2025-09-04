@@ -26,7 +26,7 @@ const Canadastudent = () =>{
           </p>
     
           <p style={{ marginBottom: "20px" }}>
-            Canada remains one of the most popular study destinations in the world, known for its prestigious universities, diverse cultural environment, and post-study career opportunities. If you are planning to <strong style={{color: 'orange', fontWeight: 'bold'}}><a href="https://vjcoverseas.com/study-abroad/canada" style={{color: 'orange', textDecoration: 'none'}}>Study In Canada</a></strong>, obtaining a Canada Student Visa (Study Permit) is the first and most important step.
+            Canada remains one of the most popular study destinations in the world, known for its prestigious universities, diverse cultural environment, and post-study career opportunities. If you are planning to <strong style={{color: 'orange', fontWeight: 'bold'}}><a href="https://www.vjcoverseas.com/study-abroad/canada" style={{color: 'orange', textDecoration: 'none'}}>Study In Canada</a></strong>, obtaining a Canada Student Visa (Study Permit) is the first and most important step.
           </p>
 
           <p style={{ marginBottom: "20px" }}>
