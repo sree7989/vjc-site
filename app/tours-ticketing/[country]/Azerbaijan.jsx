@@ -1,21 +1,23 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const AzerbaijanTour = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8 -mt-8 font-[Times_New_Roman]">
       <h1 className="flex justify-center text-lg sm:text-xl md:text-xl font-bold mb-6 text-center">
-        Azerbaijan Tourist Visa Process with Affordable Tour Packages – Explore Azerbaijan with <span className="text-orange-500">&nbsp;VJC Overseas</span>
+        Azerbaijan Tourist Visa Process with Affordable Tour Packages – Explore Azerbaijan with <strong className="text-orange-500">VJC Overseas</strong>
       </h1>
 
       <div className="flex flex-col md:flex-row items-start gap-6 mb-8">
         <div className="md:w-1/2 text-base text-justify leading-snug">
-          <p>
-            Nestled at the crossroads of Europe and Asia, Azerbaijan is a captivating destination known for its stunning landscapes, rich history, and vibrant culture. From the modern skyline of Baku to the ancient cave city of Gobustan, Azerbaijan offers a unique blend of tradition and modernity. If you’re planning a visit, <span className="text-orange-500">VJC Overseas</span> is your trusted partner to simplify the Azerbaijan tourist visa process and offer affordable and customizable tourist packages tailored to your interests and budget.
-          </p>
+         <p>
+  Nestled at the crossroads of Europe and Asia, Azerbaijan is a breathtaking country that combines ancient history, stunning natural landscapes, and vibrant modernity. Whether it’s the futuristic skyline of Baku, the timeless charm of Sheki, or the UNESCO-listed rock carvings in Gobustan, Azerbaijan has something for every traveler. With <strong className="text-black">VJC Overseas</strong> as your trusted partner, planning your Azerbaijan journey becomes seamless, from securing your tourist visa to choosing the right travel package tailored to your needs.
+</p>
+
           <p className="mt-0">
-            As a reputable immigration consultancy, we streamline your visa application and travel arrangements, ensuring a hassle-free journey to this beautiful country.
+            As one of the <span className="text-orange-500"><Link href="https://www.vjcoverseas.com" className="text-orange-500">Best Visa Immigration Consultants</Link></span>, we specialize in simplifying the Azerbaijan tourist visa process for Indian travelers. Our experienced team ensures that every step—from documentation to approval—is handled with accuracy, saving you valuable time and effort.
           </p>
         </div>
         <div className="md:w-1/2 w-full rounded-lg overflow-hidden">
@@ -33,55 +35,54 @@ const AzerbaijanTour = () => {
 
       <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">What is the Azerbaijan Tourist Visa?</h2>
       <p className="mb-5 text-base text-justify leading-snug">
-        Indian nationals require a tourist visa to Azerbaijan before traveling. Fortunately, Azerbaijan offers an efficient e-visa system that allows travelers to apply online without visiting an embassy. The tourist visa is generally valid for 30 days and can be a single or multiple-entry visa depending on your travel plans.
+        Indian citizens planning to travel to Azerbaijan require a tourist visa. Fortunately, Azerbaijan offers a convenient e-visa system, allowing travelers to apply online without visiting an embassy. Typically, the tourist visa is valid for 30 days and can be issued as a single-entry or multiple-entry visa, depending on your requirements.
       </p>
       <p className="mb-5 text-base text-justify leading-snug">
-        At <span className="text-orange-500">VJC Overseas</span>, we assist you in navigating the e-visa application process to ensure a smooth and timely approval.
+        At <strong className="text-black">VJC Overseas</strong>, we guide you through the entire process, ensuring your application is error-free and approved without delays. Our team also provides expert assistance with flight bookings, accommodation, and other travel essentials, making your journey completely hassle-free.
       </p>
 
       <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">Azerbaijan Tourist Visa Requirements</h2>
       <ul className="list-disc list-inside mb-5 text-base text-justify space-y-1.5">
         <li>A valid passport with at least six months validity from the date of entry</li>
-        <li>A recent passport-sized photograph meeting embassy specifications</li>
+        <li>A recent passport-sized photograph</li>
         <li>Completed e-visa application form</li>
-        <li>Confirmed flight bookings for entry and exit</li>
+        <li>Confirmed flight tickets for entry and exit</li>
         <li>Proof of accommodation in Azerbaijan</li>
         <li>Proof of financial means to support your stay</li>
-        <li>Payment of the visa fee online</li>
+        <li>Online payment of the visa fee</li>
       </ul>
       <p className="mb-5 text-base text-justify leading-snug">
-        Our team at <span className="text-orange-500">VJC Overseas</span> guides you step-by-step through the documentation and application process, minimizing errors and delays.
+        Our dedicated consultants will carefully verify your documents and provide step-by-step guidance throughout the process. We also act as <span className="text-orange-500"><Link href="https://www.vjcoverseas.com/visit-visas" className="text-orange-500">Visit Visa Consultants</Link></span> to make your journey smooth and worry-free.
       </p>
 
-      <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">How VJC Overseas Simplifies Your Azerbaijan Visa and Travel Process</h2>
+      <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">Simplifying Your Visa & Travel with VJC Overseas</h2>
       <ul className="list-disc list-inside mb-5 text-base text-justify space-y-1.5">
-        <li>Personalized consultation to determine the best visa option for your trip</li>
-        <li>Assistance with e-visa form filling and document verification</li>
-        <li>Guidance on flight bookings and accommodation arrangements</li>
-        <li>Support with travel insurance and currency exchange</li>
-        <li>Regular updates on visa status and travel advisories</li>
+        <li>Personalized consultation to determine the right visa category</li>
+        <li>Assistance with e-visa applications and document review</li>
+        <li>Flight bookings and hotel arrangements</li>
+        <li>Travel insurance and currency exchange support</li>
+        <li>Regular updates on visa status and travel guidelines</li>
       </ul>
       <p className="mb-5 text-base text-justify leading-snug">
-        Our dedicated services ensure your Azerbaijan tourist visa process is hassle-free and efficient.
+        With years of experience, we not only help with visa applications but also provide <span className="text-orange-500"><Link href="https://www.vjcoverseas.com/tours-ticketing" className="text-orange-500">Tours and Ticketing Services</Link></span>, ensuring a stress-free journey from flights to accommodations and transfers.
       </p>
 
-      <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">Affordable Azerbaijan Tourist Packages</h2>
+      <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">Affordable Azerbaijan Tour Packages</h2>
       <p className="mb-5 text-base text-justify leading-snug">
-        Along with visa assistance, <span className="text-orange-500">VJC Overseas</span> offers affordable and customizable Azerbaijan tour packages that let you explore the country’s stunning landmarks and vibrant culture without breaking the bank.
+        Travelers who want a complete experience can benefit from our exclusive <span className="text-orange-500"><Link href="https://www.vjcoverseas.com/tours-ticketing/azerbaijan" className="text-orange-500">Azerbaijan Tour Packages</Link></span>. These packages are carefully designed to cover every aspect of your trip while staying within budget.
       </p>
       <ul className="list-disc list-inside mb-5 text-base text-justify space-y-1.5">
         <li>Flight bookings and airport transfers</li>
-        <li>Comfortable hotels in Baku and other popular destinations</li>
-        <li>Guided tours of iconic sites such as the Flame Towers, Maiden Tower, Gobustan National Park, and the Caspian Sea coast</li>
-        <li>Cultural experiences including local cuisine tasting, traditional performances, and market visits</li>
-        <li>Custom itineraries tailored to your travel interests and budget</li>
-        <li>Visa processing and travel insurance support</li>
+        <li>Comfortable hotel accommodations in prime locations</li>
+        <li>Guided tours of Baku, Gobustan National Park, Flame Towers, Maiden Tower, and Caspian Sea coast</li>
+        <li>Cultural experiences like traditional Azerbaijani cuisine, folk performances, and local bazaars</li>
+        <li>Custom itineraries for solo travelers, families, or groups</li>
       </ul>
       <p className="mb-5 text-base text-justify leading-snug">
         Whether you’re traveling solo, with family, or in a group, our Azerbaijan packages are designed to fit your unique travel needs.
       </p>
 
-      <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">Why Choose <span className="text-orange-500">VJC Overseas</span>?</h2>
+      <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">Why Choose <strong className="text-black">VJC Overseas</strong>?</h2>
       <ul className="list-disc list-inside mb-5 text-base text-justify space-y-1.5">
         <li>Experienced immigration consultancy with high visa approval rates</li>
         <li>Transparent pricing with no hidden charges</li>
@@ -92,8 +93,9 @@ const AzerbaijanTour = () => {
 
       <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">Start Your Azerbaijan Journey Today</h2>
       <p className="mb-5 text-base text-justify leading-snug">
-        With <span className="text-orange-500">VJC Overseas</span>, the Azerbaijan tourist visa process becomes straightforward, and your travel arrangements are expertly handled. Contact us now to start your visa application and explore our affordable Azerbaijan tourist packages crafted just for you.
-      </p>
+  With <span className="text-orange-500"><Link href="https://www.vjcoverseas.com" className="text-orange-500">VJC Overseas</Link></span>, the Azerbaijan tourist visa process becomes straightforward, and your travel arrangements are expertly handled. Contact us now to start your visa application and explore our affordable Azerbaijan tourist packages crafted just for you.
+</p>
+
       <p className="text-base font-semibold text-center md:text-left text-orange-600">
         Get in touch today and embark on an unforgettable Azerbaijan adventure!
       </p>
