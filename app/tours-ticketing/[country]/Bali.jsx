@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const BaliTour = () => {
   return (
@@ -12,7 +13,7 @@ const BaliTour = () => {
       <div className="flex flex-col md:flex-row items-start gap-6 mb-8">
         <div className="md:w-1/2 text-base text-justify leading-snug">
           <p>
-            Bali, the Island of the Gods, is a dream destination known for its pristine beaches, vibrant culture, lush rice terraces, and spiritual retreats. Whether you want to surf the waves in Kuta, explore the artistic town of Ubud, or relax in luxury resorts, Bali offers an unforgettable experience for every traveler. Planning your Bali trip? <span className="text-orange-500">VJC Overseas</span> is your trusted partner to guide you through the Bali tourist visa process and provide affordable and customized tourist packages tailored to your budget and preferences.
+            Bali, the Island of the Gods, is a dream destination known for its pristine beaches, vibrant culture, lush rice terraces, and spiritual retreats. Whether you want to surf the waves in Kuta, explore the artistic town of Ubud, or relax in luxury resorts, Bali offers an unforgettable experience for every traveler. Planning your Bali trip? <span className="font-bold text-black">VJC Overseas</span> is your trusted partner to guide you through the Bali tourist visa process and provide affordable and customized tourist packages tailored to your budget and preferences.
           </p>
           <p className="mt-3">
             As a leading immigration consultancy, we simplify your visa application and travel arrangements to ensure a smooth and memorable Bali vacation.
@@ -31,12 +32,17 @@ const BaliTour = () => {
         </div>
       </div>
 
+      <p className="mb-5 text-base text-justify leading-snug">
+        Bali, often called the Island of the Gods, is one of the world’s most enchanting travel destinations. With its pristine beaches, lush green rice terraces, volcanic landscapes, and spiritual retreats, Bali attracts millions of visitors each year. Whether you want to surf the waves at Kuta, soak in the artistic vibes of Ubud, or unwind at luxury seaside resorts, Bali promises an unforgettable holiday experience. Planning such a trip requires not only the right visa guidance but also well-organized travel arrangements. That’s where <Link href="https://www.vjcoverseas.com" className="text-orange-500 font-bold">Best Visa Immigration Consultants</Link> come in—your trusted experts to simplify the Bali tourist visa process and create affordable holiday packages tailored perfectly to your budget and preferences.
+
+      </p>
+
       <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">What is a Bali Tourist Visa?</h2>
       <p className="mb-5 text-base text-justify leading-snug">
         Bali is part of Indonesia, and to visit Bali for tourism, Indian citizens require an Indonesian Tourist Visa. Depending on the purpose and length of stay, you can apply for either a <strong>Visa on Arrival (VoA)</strong>, <strong>e-Visa</strong>, or a <strong>Social-Cultural Visa</strong> (for longer stays). The most common for tourists is the VoA, which allows a stay of up to 30 days with an option to extend.
       </p>
       <p className="mb-5 text-base text-justify leading-snug">
-        At <span className="text-orange-500">VJC Overseas</span>, we help you understand the best visa option for your trip and assist you in preparing and submitting your application accurately for timely approval.
+        At <span className="font-bold text-black">VJC Overseas</span>, we help you understand the best visa option for your trip and assist you in preparing and submitting your application accurately for timely approval.
       </p>
 
       <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">Bali Tourist Visa Requirements</h2>
@@ -52,7 +58,7 @@ const BaliTour = () => {
         <li>Additional supporting documents based on visa type</li>
       </ul>
       <p className="mb-5 text-base text-justify leading-snug">
-        Our experts at <span className="text-orange-500">VJC Overseas</span> help you gather and verify these documents to ensure your visa application meets all requirements.
+        Our experts at <span className="text-orange-500 font-bold"><Link href="https://www.vjcoverseas.com/visit-visas">Visit Visa Consultants</Link></span> help you gather and verify these documents to ensure your visa application meets all requirements.
       </p>
 
       <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">How VJC Overseas Supports Your Bali Visa Process</h2>
@@ -69,7 +75,7 @@ const BaliTour = () => {
 
       <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">Affordable Bali Tourist Packages</h2>
       <p className="mb-5 text-base text-justify leading-snug">
-        Along with visa assistance, <span className="text-orange-500">VJC Overseas</span> offers budget-friendly and customizable Bali tour packages that cover the best of the island.
+        Along with visa assistance, <span className="text-orange-500 font-bold"><Link href="https://www.vjcoverseas.com/tours-ticketing">Tours and Ticketing Services</Link></span> offers budget-friendly and customizable Bali tour packages that cover the best of the island.
       </p>
       <ul className="list-disc list-inside mb-5 text-base text-justify space-y-1.5">
         <li>Flight bookings and airport transfers</li>
@@ -81,10 +87,10 @@ const BaliTour = () => {
         <li>Visa and travel insurance assistance included</li>
       </ul>
       <p className="mb-5 text-base text-justify leading-snug">
-        Whether you’re traveling solo, with family, or as a group, we craft packages that fit your style and budget.
+        Whether you’re traveling solo, with family, or as a group, we craft packages that fit your style and budget. Check our <span className="text-orange-500 font-bold"><Link href="https://vjcoverseas.com/tours-ticketing/bali">Bali Cruise Packages</Link></span> for a luxurious experience.
       </p>
 
-      <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">Why Choose <span className="text-orange-500">VJC Overseas</span>?</h2>
+      <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">Why Choose <span className="text-orange-500 font-bold"><Link href="https://www.vjcoverseas.com/">VJC Overseas</Link></span>?</h2>
       <ul className="list-disc list-inside mb-5 text-base text-justify space-y-1.5">
         <li>Experienced immigration consultancy with high visa approval success</li>
         <li>Transparent pricing with no hidden fees</li>
@@ -95,8 +101,9 @@ const BaliTour = () => {
 
       <h2 className="text-xl font-bold mb-3 text-[#0D5BA8]">Begin Your Bali Adventure Today</h2>
       <p className="mb-5 text-base text-justify leading-snug">
-        With <span className="text-orange-500">VJC Overseas</span>, the Bali tourist visa process is simple, and your travel plans are expertly handled. Contact us now to start your visa application and discover affordable Bali packages tailored just for you.
-      </p>
+  With <Link href="https://www.vjcoverseas.com" className="text-orange-500 font-bold">VJC Overseas</Link>, the Bali tourist visa process is simple, and your travel plans are expertly handled. Contact us now to start your visa application and discover affordable Bali packages tailored just for you.
+</p>
+
       <p className="text-base font-semibold text-center md:text-left text-orange-600">
         Get in touch today and make your dream Bali holiday a reality!
       </p>
