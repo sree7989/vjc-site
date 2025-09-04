@@ -1,27 +1,29 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const ItalyTour = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8 -mt-8 font-[Times_New_Roman]">
       <h1 className="flex justify-center text-lg sm:text-xl md:text-xl font-bold mb-6 text-center">
-        Italy Tourist Visa Process with Affordable Tour Packages – Discover Italy with <span className="text-orange-500">VJC Overseas</span>
-      </h1>
+  Italy Tourist Visa Process with Affordable Tour Packages – Discover Italy with <span className="text-orange-500 font-bold">VJC Overseas</span>
+</h1>
+
 
       <div className="flex flex-col md:flex-row items-start gap-6 mb-8">
         <div className="md:w-1/2 text-base text-justify leading-snug">
           <p>
-            Italy is a land of timeless art, architecture, and culinary delights. From the romantic canals of Venice to the historic Colosseum in Rome, the scenic Amalfi Coast, and the cultural charm of Florence, Italy promises an unforgettable travel experience. At <span className="text-orange-500">VJC Overseas</span>, we simplify the Italy tourist visa process and offer affordable Italy tour packages that help you explore this stunning country with ease and comfort.
+            Italy is a land of timeless art, architecture, and culinary delights. From the romantic canals of Venice to the historic Colosseum in Rome, the scenic Amalfi Coast, and the cultural charm of Florence, Italy promises an unforgettable travel experience. At <strong className="text-black">VJC Overseas</strong>, we simplify the Italy tourist visa process and offer affordable Italy tour packages that help you explore this stunning country with ease and comfort.
           </p>
           <p className="mt-3">
-            As a leading immigration consultancy, we assist travelers from India in obtaining their Schengen visa for Italy and provide end-to-end travel planning, all within your budget.
+            As one of the <Link href="https://www.vjcoverseas.com" className="text-orange-500 font-bold">Best Visa Immigration Consultants</Link> in India, we provide expert assistance for travelers who wish to explore Italy’s beauty. Whether you are traveling for leisure, heritage exploration, or cultural discovery, our dedicated support ensures your journey begins without stress.
           </p>
         </div>
 
         <div className="md:w-1/2 w-full rounded-lg overflow-hidden">
           <Image
-            src="/italy-rome-historic.webp"  // replace with your actual Italy image path
+            src="/italy-rome-historic.webp"
             alt="Italy Tourist Visa and Tour Packages with VJC Overseas"
             width={600}
             height={350}
@@ -52,7 +54,7 @@ const ItalyTour = () => {
         <li>Proof of ties to your home country (job, property, family)</li>
       </ul>
       <p className="mb-6 text-base text-justify leading-snug">
-        At <span className="text-orange-500">VJC Overseas</span>, our visa experts help you prepare and organize each document meticulously, reducing the risk of delays or rejections.
+        With our professional guidance at <Link href="https://www.vjcoverseas.com" className="text-orange-500 font-bold">VJC Overseas</Link>, every document is carefully checked and organized, reducing the risk of rejections or delays.
       </p>
 
       <h2 className="text-xl font-bold mb-3 text-[#00843D]">Step-by-Step Visa Support</h2>
@@ -65,12 +67,12 @@ const ItalyTour = () => {
         <li>Ongoing Updates & Final Travel Briefing</li>
       </ul>
       <p className="mb-6 text-base text-justify leading-snug">
-        With our professional guidance, your Italy visa process becomes simple, fast, and stress-free.
+        Many travelers searching for reliable <Link href="https://www.vjcoverseas.com/visit-visas" className="text-orange-500 font-bold">Visit Visa Consultants</Link> choose <strong className="text-black">VJC Overseas</strong> because of our proven track record and expert handling of every step in the process.
       </p>
 
-      <h2 className="text-xl font-bold mb-3 text-[#00843D]">Affordable Italy Tour Packages by VJC Overseas</h2>
+      <h2 className="text-xl font-bold mb-3 text-[#00843D]">Affordable Italy Tour Packages</h2>
       <p className="mb-6 text-base text-justify leading-snug">
-        We not only help you get your visa but also create unforgettable travel experiences through our affordable Italy tour packages. These are curated for families, honeymooners, solo travelers, and senior citizens.
+        Apart from visa support, <Link href="https://www.vjcoverseas.com/tours-ticketing" className="text-orange-500 font-bold">Tours and Ticketing Services</Link> to ensure your Italy vacation is budget-friendly yet luxurious. These packages are curated for families, honeymooners, solo travelers, and senior citizens.
       </p>
       <ul className="list-disc list-inside mb-6 text-base text-justify space-y-1.5">
         <li>International flight bookings</li>
@@ -82,22 +84,23 @@ const ItalyTour = () => {
         <li>Travel insurance and currency exchange help</li>
       </ul>
       <p className="mb-6 text-base text-justify leading-snug">
-        We focus on giving you a complete Italian experience at a price that fits your pocket.
+        Our team also specializes in <Link href="https://www.vjcoverseas.com/tours-ticketing/italy" className="text-orange-500 font-bold">Rome City Tours</Link> to make your Italian journey seamless from start to finish.
       </p>
 
       <h2 className="text-xl font-bold mb-3 text-[#00843D]">Why Choose VJC Overseas?</h2>
       <ul className="list-disc list-inside mb-6 text-base text-justify space-y-1.5">
         <li>Expert guidance in Schengen visa filing</li>
-        <li>High approval success rate</li>
-        <li>Tailor-made, budget-friendly Italy packages</li>
-        <li>Transparent, all-inclusive pricing</li>
-        <li>Complete travel support from visa to return</li>
+        <li>High visa approval success rate</li>
+        <li>Tailor-made, budget-friendly Italy travel packages</li>
+        <li>Transparent pricing with no hidden costs</li>
+        <li>End-to-end travel support, from visa filing to guided city tours</li>
       </ul>
 
       <h2 className="text-xl font-bold mb-3 text-[#00843D]">Ready to Travel to Italy?</h2>
       <p className="mb-6 text-base text-justify leading-snug">
-        Let <span className="text-orange-500">VJC Overseas</span> help you bring your Italian holiday dreams to life. With expert visa guidance and cost-effective tour packages, you’ll enjoy every step of the journey — stress-free and unforgettable.
-      </p>
+  Your dream Italian holiday begins with the right partner. Let <strong className="text-black">VJC Overseas</strong> help you bring your Italian holiday dreams to life. With expert visa guidance and cost-effective tour packages, you’ll enjoy every step of the journey — stress-free and unforgettable.
+</p>
+
       <p className="text-base font-semibold text-center md:text-left text-orange-600">
         Contact us now to start your Italy tourist visa process and unlock the best Italy travel deals today!
       </p>
