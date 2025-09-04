@@ -233,17 +233,7 @@ const Denwork = () => {
         Ready to make Denmark your next career destination? Contact us today to
         get started with your Denmark Work Permit Visa application!
       </p>
-      <ul className="mb-6 ml-8 list-disc">
-        <li>
-          <b>Phone: </b>+91-9160449000
-        </li>
-        <li>
-          <b>Email: </b>info@vjcoverseas.com
-        </li>
-        <li>
-          <b>Visit Our Office: </b>10AM-7PM
-        </li>
-      </ul>
+     
       <p className="mb-6">
         We look forward to helping you secure your dream job and a bright future
         in Denmark!
