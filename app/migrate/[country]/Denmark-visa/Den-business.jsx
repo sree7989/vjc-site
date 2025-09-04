@@ -250,9 +250,7 @@ const Denbusiness = () => {
           migration is not just a move—it’s the beginning of a better future.
         </p>
 
-        <p className="mb-6">
-          Call us at +91-9160449000 or email info@vjcoverseas.com to get started.
-        </p>
+       
       </div>
     </div>
   );
