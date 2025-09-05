@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
+import Form from "./Form";
 import Two from "./Two";
 
 
@@ -23,15 +24,15 @@ const ContactPage = () => {
   return (
     <>
       {/* Navbar */}
-      <div style={{ marginTop: "1%", zIndex: 20, position: "relative" }}>
-       <Two />
+      <div style={{ marginTop: "2%" }}>
+     <Two />
       </div>
 
       {/* Main Section */}
       
       {/* Other Sections */}
- 
-   
+      
+      
 
     </>
   );
