@@ -88,13 +88,12 @@ const Migrate = () => {
               {/* ===== APPLY BUTTON: LARGE SCREENS ONLY ===== */}
               <div className="  mt-6">
                 <button
-              className="relative inline-block px-8 py-3 font-bold text-white bg-gradient-to-r from-orange-500 via-black to-orange-500 rounded-xl overflow-hidden group shadow-xl animate-pulse-glow"
-              onClick={() => setIsOpen(true)}
-            >
-              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-orange-400 via-black to-orange-600 transition-transform duration-500 ease-in-out group-hover:bg-blue-400 rounded-xl animate-shimmer"></span>
-              <span className="relative z-10">Apply Now</span>
-            </button>
-
+                  className="relative inline-block px-8 py-3 font-bold text-white bg-gradient-to-r from-orange-500 via-black to-orange-500 rounded-xl overflow-hidden group shadow-xl animate-pulse-glow"
+                  onClick={() => setIsOpen(true)}
+                >
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-orange-400 via-black to-orange-600 transition-transform duration-500 ease-in-out group-hover:bg-blue-400 rounded-xl animate-shimmer"></span>
+                  <span className="relative z-10">Apply Now</span>
+                </button>
               </div>
 
             </motion.div>
