@@ -30,7 +30,6 @@ import Azerbaijan from "./Azerbaijan";
 import Southafrica from "./Southafrica";
 import Japan from "./Japan";
 import ModalFormWithPopup from "../../Popup/Popup"; // adjust path if needed
-
 import MaltaImageContent from "../../Popup/Toursandtickeing";
 
 const visaData = [
@@ -126,52 +125,13 @@ const Migrate = () => {
         </div>
       </div>
 
-      {/* ===== BOTTOM SECTION ===== */}
+      {/* ===== BOTTOM SECTION (Two Layouts Only) ===== */}
       <div className="relative z-10 w-full bg-white px-4 sm:px-6 lg:px-12 pt-10 pb-16">
         <div className="w-full flex flex-col md:flex-row gap-8 md:gap-10 items-start">
-          {/* Left: Heading + Visa Buttons Section */}
-          <div className="w-full md:w-1/3 order-2 md:order-1">
-            <div className="flex justify-center md:justify-start mb-8 mr-8 md:ml-16">
-              <h2 className="text-3xl font-bold text-gray-800 bg-gradient-to-r from-orange-500 to-black bg-clip-text text-transparent">
-                <span className="block md:text-left text-center">From tickets to</span>
-                <span className="block text-center"> tales, we deliver!</span>
-              </h2>
-            </div>
-
-            {/* Apply Button for Small Screens Only */}
-            <div className="block lg:hidden mb-6 text-center">
-              <button
-                className="mt-2 relative inline-block px-8 py-3 font-bold text-white bg-gradient-to-r from-orange-500 via-black to-orange-500 rounded-xl overflow-hidden group shadow-xl animate-pulse-glow"
-                onClick={() => setIsOpen(true)}
-              >
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-orange-400 via-black to-orange-600 transition-transform duration-500 ease-in-out group-hover:bg-blue-400 rounded-xl animate-shimmer"></span>
-                <span className="relative z-10">Apply Now</span>
-              </button>
-            </div>
-
-            {visaData.map((visa) => (
-              <Link
-                key={visa.path}
-                href={visa.path}
-                className={`block mb-4 w-full no-underline`}
-              >
-                <div
-                  className={`w-full flex items-center justify-between text-lg font-semibold px-6 py-4 rounded-xl transition duration-300 shadow-lg ${
-                    selectedVisa.path === visa.path
-                      ? "bg-orange-500 text-white border-orange-500 shadow-orange-400"
-                      : "bg-transparent text-black border border-orange-500 hover:bg-orange-500 hover:text-white"
-                  } transform hover:scale-105`}
-                >
-                  {visa.name}
-                  <ArrowRight className="w-6 h-6" />
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          {/* Right: Visa Info Content Box */}
+          
+          {/* Content Box (Mobile First Order) */}
           <div
-            className="w-full md:w-2/3 p-4 md:p-6 rounded-xl border border-gray-300 shadow-md relative mt-6 order-1 md:order-2"
+            className="w-full md:w-2/3 p-4 md:p-6 rounded-xl border border-gray-300 shadow-md relative order-1 md:order-2"
             style={{ maxHeight: "1800px", minHeight: "1300px", overflowY: "auto" }}
           >
             {selectedVisa.path === defaultVisa.path ? (
@@ -230,6 +190,36 @@ const Migrate = () => {
               </div>
             )}
           </div>
+
+          {/* Heading + Buttons */}
+          <div className="w-full md:w-1/3 order-2 md:order-1 flex flex-col items-center md:items-start">
+            <div className="flex justify-center md:justify-start mb-8">
+              <h2 className="text-3xl font-bold text-gray-800 bg-gradient-to-r from-orange-500 to-black bg-clip-text text-transparent text-center md:text-left">
+                <span className="block">From tickets to</span>
+                <span className="block">tales, we deliver!</span>
+              </h2>
+            </div>
+
+            {visaData.map((visa) => (
+              <Link
+                key={visa.path}
+                href={visa.path}
+                className={`block mb-4 w-full no-underline`}
+              >
+                <div
+                  className={`w-full flex items-center justify-between text-lg font-semibold px-6 py-4 rounded-xl transition duration-300 shadow-lg ${
+                    selectedVisa.path === visa.path
+                      ? "bg-orange-500 text-white border-orange-500 shadow-orange-400"
+                      : "bg-transparent text-black border border-orange-500 hover:bg-orange-500 hover:text-white"
+                  } transform hover:scale-105`}
+                >
+                  {visa.name}
+                  <ArrowRight className="w-6 h-6" />
+                </div>
+              </Link>
+            ))}
+          </div>
+
         </div>
       </div>
       

@@ -24,7 +24,7 @@ const ContactPage = () => {
   return (
     <>
       {/* Navbar */}
-      <div style={{ marginTop: "2%", zIndex: 20, position: "relative" }}>
+      <div style={{ marginTop: "2%" }}>
      <Two />
       </div>
 
