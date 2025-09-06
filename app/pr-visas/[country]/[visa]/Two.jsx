@@ -2,8 +2,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { ArrowRight } from "lucide-react";
-
-// Canada visa pages
 import Canadanova from './Canadapages/Canadanova';
 import Canadamanitoba from './Canadapages/Canadamanitoba';
 import Canadapredward from './Canadapages/Canadapredward';
@@ -19,22 +17,17 @@ import Canadaict from "./Canadapages/Canadaict";
 import Canadaontario from "./Canadapages/Canadaontario";
 import Canadasaskatchewan from "./Canadapages/Canadasaskatchewan";
 import Canadaalberta from "./Canadapages/Canadaalberta";
-
-// Australia visa pages
 import Aus189 from "./Australia-visa/Aus189";
 import Aus190 from "./Australia-visa/Aus190";
 import Aus191 from "./Australia-visa/Aus191";
 import Aus491 from "./Australia-visa/Aus491";
 import Aus494 from "./Australia-visa/Aus494";
-
-// Other components
 import Noc from "./Canadapages/Noc";
 import Link from "next/link";
 import ModalFormWithPopup from "../../../Popup/Popup";
 import PRVisaContent from "../../../Popup/prvisas";
+// Form component
 import Form from '../../Form';
-
-// =================== CONSTANTS ===================
 
 // Country visa options
 const countryVisaData = {
@@ -48,7 +41,7 @@ const countryVisaData = {
   ],
   "canada-pr": [
     { name: "Canada Express Entry", path: "/pr-visas/canada-pr/canada-express-entry" },
-    { name: "National Occupational Codes List", path: "/pr-visas/canada-pr/national-occupational-codes-list" },
+    { name: "National Occupational Codes List ", path: "/pr-visas/canada-pr/national-occupational-codes-list"},
     { name: "Canada Provincial Nominee Program", path: "/pr-visas/canada-pr-provincial-nominee-program" },
     { name: "Canada Quebec Selected Workers Program", path: "/pr-visas/canada-pr/canada-quebec-selected-workers-program" },
     { name: "Canada ICT Program", path: "/pr-visas/canada-pr/canada-ict-program" },
@@ -58,7 +51,7 @@ const countryVisaData = {
     { name: "Canada Investor Program", path: "/pr-visas/canada-pr/canada-investor-program" },
     { name: "Canada Atlantic Immigration Pilot Program", path: "/pr-visas/canada-pr/canada-atlantic-immigration-pilot-program" },
   ],
-  "canada-pr-provincial-nominee-program": [
+  "canada-pr-provincial-nominee-program":[
     { name: "Canada Provincial Nominee Program", path: "/pr-visas/canada-pr-provincial-nominee-program" },
     { name: "Canada Prince Edward Island", path: "/pr-visas/canada-pr-provincial-nominee-program/canada-prince-edward-island" },
     { name: "Canada Ontario", path: "/pr-visas/canada-pr-provincial-nominee-program/canada-ontario" },
@@ -70,9 +63,9 @@ const countryVisaData = {
   "australia-pr": [
     { name: "189 Skilled Independent Visa", path: "/pr-visas/australia-pr/189-skilled-independent-visa" },
     { name: "190 Skilled Nominated Visa", path: "/pr-visas/australia-pr/190-skilled-nominated-visa" },
-    { name: "191 Permanent Residence (Skilled Regional) Visa", path: "/pr-visas/australia-pr/191-permanent-residence-visa" },
-    { name: "491 Skilled Work Regional (Provisional) Visa", path: "/pr-visas/australia-pr/491-skilled-work-regional-visa" },
-    { name: "494 Skilled Employer Sponsored Regional (Provisional) Visa", path: "/pr-visas/australia-pr/494-skilled-employer-sponsered-regional-visa" },
+    { name: "191	Permanent Residence (Skilled Regional) Visa", path: "/pr-visas/australia-pr/191-permanent-residence-visa" },
+    { name: "491	Skilled Work Regional (Provisional) Visa", path: "/pr-visas/australia-pr/491-skilled-work-regional-visa" },
+    { name: "494	Skilled Employer Sponsored Regional (Provisional) Visa", path: "/pr-visas/australia-pr/494-skilled-employer-sponsered-regional-visa" },
   ],
   "uk-pr": [
     { name: "Canada Permanent Residency Visa", path: "/pr-visas/canada-pr", image: "/1.jpg" },
@@ -90,17 +83,18 @@ const countryVisaData = {
     { name: "Germany Blue Card Visa", path: "/pr-visas/germany-blue-card", image: "/images/germany.jpg" },
     { name: "USA Green Card", path: "/pr-visas/usa-green-card", image: "/images/usa.jpg" },
   ],
-  "usa-green-card": [
+ "usa-green-card": [
     { name: "Canada Permanent Residency Visa", path: "/pr-visas/canada-pr", image: "/1.jpg" },
     { name: "Australia Permanent Residency Visa", path: "/pr-visas/australia-pr", image: "/airplane.png" },
-    { name: "UK Permanent Residency Visa", path: "/pr-visas/uk-pr", image: "/dmbusi.jpg" },
+    { name: "UK Permanent Residency Visa", path: "/pr-visas/uk-r", image: "/dmbusi.jpg" },
     { name: "New Zealand Permanent Residency Visa", path: "/pr-visas/new-zealand-pr", image: "/images/newzealand.jpg" },
     { name: "Germany Blue Card Visa", path: "/pr-visas/germany-blue-card", image: "/images/germany.jpg" },
     { name: "USA Green Card", path: "/pr-visas/usa-green-card", image: "/images/usa.jpg" },
   ],
+  // Add similar arrays for other countries as needed
 };
 
-// Visa component mapping
+// Visa component map
 const visaComponents = {
   "canada-pr-canada-ict-program": Canadaict,
   "canada-pr-canada-fstp": Canadafstp,
@@ -108,12 +102,12 @@ const visaComponents = {
   "canada-pr-canada-investor-program": Canadainvestor,
   "canada-pr-canada-fswp": Canadafswp,
   "canada-pr-canada-quebec-selected-workers-program": Canadaquebic,
-  "canada-pr-canada-family-sponsorship": Canadafamily, 
+  "canada-pr-canada-family-sponsorship": Canadafamily,
   "canada-pr-visa": Canadapr,
   "canada-pr-national-occupational-codes-list": Noc,
   "canada-pr-canada-express-entry": Canadaexpress,
   "canada-pr-provincial-nominee-program-canada-prince-edward-island": Canadapredward,
-  "canada-pr-provincial-nominee-program-canada-ontario": Canadaontario, 
+  "canada-pr-provincial-nominee-program-canada-ontario": Canadaontario,
   "canada-pr-provincial-nominee-program-canada-saskatchewan": Canadasaskatchewan,
   "canada-pr-provincial-nominee-program-canada-alberta": Canadaalberta,
   "canada-pr-provincial-nominee-program-canada-manitoba": Canadamanitoba,
@@ -125,7 +119,7 @@ const visaComponents = {
   "australia-pr-494-skilled-employer-sponsered-regional-visa": Aus494,
 };
 
-// Background images
+// Background image per visa
 const visaBackgroundImages = {
   "/pr-visas/canada-pr/canada-express-entry": "/canada-pr-express-entry.jpg",
   "/pr-visas/canada-pr-provincial-nominee-program/canada-prince-edward-island": "/candapr-price-edward-island.jpg",
@@ -141,15 +135,17 @@ const visaBackgroundImages = {
   "/pr-visas/canada-pr/canada-fstp": "/canada-fstp.jpg",
   "/pr-visas/canada-pr/canada-family-sponsorship": "/canadapr-family-sponsership-visa1.webp",
   "/pr-visas/canada-pr/canada-investor-program": "/vjc-gsevisa.jpg",
-  "/pr-visas/canada-pr/canada-atlantic-immigration-pilot-program": "/canada-aipp.png",
-  "/pr-visas/australia-pr/189-skilled-independent-visa": "/skilledindependent.png",
-  "/pr-visas/australia-pr/190-skilled-nominated-visa": "/skilledwork.png",
-  "/pr-visas/australia-pr/191-permanent-residence-visa": "/Australia-s-General-Skilled-Migration-Program.webp",
-  "/pr-visas/australia-pr/491-skilled-work-regional-visa": "/subclass-491-visa-pathways.jpg",
-  "/pr-visas/australia-pr/494-skilled-employer-sponsered-regional-visa": "/suclass-494-australiapr.jpg",
+  "/pr-visas/canada-pr/canada-starup-visa": "/",
+  "/pr-visas/canada-pr/canada-atlantic-immigration-pilot-program":"/canada-aipp.png",
+  "/pr-visas/canada-pr/canada-business-visa":"/",
+  "/pr-visas/australia-pr/189-skilled-independent-visa":"/skilledindependent.png",
+  "/pr-visas/australia-pr/190-skilled-nominated-visa":"/skilledwork.png",
+  "/pr-visas/australia-pr/191-permanent-residence-visa":"/Australia-s-General-Skilled-Migration-Program.webp",
+  "/pr-visas/australia-pr/491-skilled-work-regional-visa":"/subclass-491-visa-pathways.jpg",
+  "/pr-visas/australia-pr/494-skilled-employer-sponsered-regional-visa":"/suclass-494-australiapr.jpg",
 };
 
-// Default background per country
+// Fallback background per country
 const defaultBackgroundImages = {
   germany: "/germanyimg.jpg",
   canada: "/canadabgimg.jpg",
@@ -157,41 +153,35 @@ const defaultBackgroundImages = {
   australia: "/australiabgimg.jpg",
 };
 
-// =================== COMPONENT ===================
 export default function MigrateCountry() {
   const router = useRouter();
   const { country, visa } = useParams();
+
   const visasList = useMemo(() => countryVisaData[country] || [], [country]);
-  
-  const defaultVisaTitle = visasList.length ? visasList[0].name : '';
-  const [selectedVisaPath, setSelectedVisaPath] = useState(null);
+  const defaultVisaTitle = visasList.length ? visasList[0].name : "";
+
   const [selectedVisaTitle, setSelectedVisaTitle] = useState(defaultVisaTitle);
-  
+
   const VisaComponent = visa ? visaComponents[`${country}-${visa}`] : null;
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => setIsImageLoaded(true), []);
-
   useEffect(() => {
-    if (visa) {
-      const matchedVisa = visasList.find(v => v.path === `/migrate/${country}/${visa}`);
+    if (visa && visasList.length) {
+      const matchedVisa = visasList.find((v) => v.path.endsWith(visa));
       if (matchedVisa) {
         setSelectedVisaTitle(matchedVisa.name);
-        setSelectedVisaPath(matchedVisa.path);
       }
     }
-  }, [visa, country, visasList]);
+  }, [visa, visasList]);
 
-  const handleButtonClick = (visa) => {
-    setSelectedVisaPath(visa.path);
-    setSelectedVisaTitle(visa.name);
-    router.push(visa.path);
+  const handleButtonClick = (visaItem) => {
+    setSelectedVisaTitle(visaItem.name);
+    router.push(visaItem.path);
   };
 
+  const selectedVisaPath = `/pr-visas/${country}/${visa}`;
   const currentBackgroundImage =
-    (selectedVisaPath && visaBackgroundImages[selectedVisaPath]) ||
-    defaultBackgroundImages[country];
+    visaBackgroundImages[selectedVisaPath] || defaultBackgroundImages[country];
 
   return (
     <div>
@@ -199,7 +189,7 @@ export default function MigrateCountry() {
       <div
         className="relative flex flex-col lg:flex-row items-center justify-between p-10 gap-10 min-h-screen"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${currentBackgroundImage})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${currentBackgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -233,27 +223,25 @@ export default function MigrateCountry() {
       </div>
 
       {/* Bottom visa section */}
-      <div className="flex flex-col lg:flex-row bg-white px-8 lg:ml-10 py-10">
-        {/* Visa content FIRST on mobile */}
-        <div className="w-full lg:flex-1 overflow-y-auto max-h-[1030px] px-8 rounded-xl shadow-md border border-gray-200 order-1 lg:order-2">
-          {VisaComponent ? <VisaComponent /> : <p>Select a visa option to view details.</p>}
-        </div>
-
-        {/* Heading + Visa options SECOND on mobile */}
-        <div className="w-full lg:w-[350px] flex-shrink-0 px-4 flex flex-col items-center mt-8 lg:mt-0 lg:ml-9 order-2 lg:order-1">
+      {/* NOTE: changed to flex-col-reverse so on small screens the content appears first,
+          then the heading, then the sub-buttons (content -> heading -> buttons).
+          On large screens (lg) it remains a two-column layout: left = heading+submenus, right = content. */}
+      <div className="flex flex-col-reverse lg:flex-row bg-white px-8 lg:ml-10 py-10">
+        {/* Visa options */}
+        <div className="w-full lg:w-[350px] flex-shrink-0 px-4 flex flex-col items-center">
           <h2 className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-black bg-clip-text text-transparent mb-8 text-center">
             Visa Options for {country?.toUpperCase()}
           </h2>
-          <div className="mb-6 flex justify-center lg:hidden">
-            <button
-              type="button"
-              onClick={() => setIsOpen(true)}
-              className="relative overflow-hidden bg-gradient-to-r from-sky-400 to-orange-500 text-white font-semibold py-2 px-6 rounded-full shadow-md hover:shadow-xl hover:scale-105 transition duration-300"
-            >
-              <span className="relative z-10">Apply Now</span>
-              <span className="absolute top-0 left-[-100%] w-full h-full bg-white/30 animate-shine" />
-            </button>
-          </div>
+          <div className=" mb-6 flex justify-center lg:hidden">
+    <button
+      type="button"
+      onClick={() => setIsOpen(true)}
+      className="relative overflow-hidden bg-gradient-to-r from-sky-400 to-orange-500 text-white font-semibold py-2 px-6 rounded-full shadow-md hover:shadow-xl hover:scale-105 transition duration-300"
+    >
+      <span className="relative z-10">Apply Now</span>
+      <span className="absolute top-0 left-[-100%] w-full h-full bg-white/30 animate-shine" />
+    </button>
+  </div>
           <div className="flex flex-col gap-4 items-center w-full">
             {visasList.map((visaItem) => {
               const isActive = visaItem.path.endsWith(visa);
@@ -261,7 +249,7 @@ export default function MigrateCountry() {
                 <Link href={visaItem.path} key={visaItem.path} className="w-full lg:w-[350px] block">
                   <div
                     className={`flex items-center justify-between text-lg font-semibold border border-orange-500 px-6 py-4 rounded-xl shadow-lg transition hover:bg-orange-500 hover:text-white
-                    ${isActive ? "bg-orange-500 text-white" : "bg-white text-black"}`}
+        ${isActive ? "bg-orange-500 text-white" : "bg-white text-black"}`}
                   >
                     {visaItem.name}
                     <ArrowRight className="w-6 h-6" />
@@ -271,9 +259,14 @@ export default function MigrateCountry() {
             })}
           </div>
         </div>
-      </div>
 
-      {/* POPUP FORM */}
+        {/* Visa content */}
+        <div className="w-full lg:flex-1 overflow-y-auto max-h-[1030px] px-8 rounded-xl shadow-md border border-gray-200 mt-8 lg:mt-0 lg:ml-9">
+          {VisaComponent ? <VisaComponent /> : <p>Select a visa option to view details.</p>}
+        </div>
+      </div>
+      
+        {/* POPUP FORM */}
       <ModalFormWithPopup
         isOpen={isOpen}
         setIsOpen={setIsOpen}

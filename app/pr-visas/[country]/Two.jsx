@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 import { useRouter, useParams, usePathname } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 
+import ModalFormWithPopup from "../../Popup/Popup";
+import PRVisaContent from "../../Popup/prvisas";
+
 import Goppcardvisa from "./Germany-visa/Goppcardvisa";
 import Canadapr from "./Canadapages/Canadapr";
 import USAstud from "./USA-visa/USA-stud";
@@ -12,8 +15,6 @@ import Link from "next/link";
 import Form from "../Form";
 import Ausstud from "./Australia-visa/Aus-stud";
 import Canadanominal from "./Canadapages/Canadanominal";
-import ModalFormWithPopup from "../../Popup/Popup";
-import PRVisaContent from "../../Popup/prvisas";
 
 const countryVisaData = {
   "germany-blue-card": [
@@ -48,9 +49,9 @@ const countryVisaData = {
   "australia-pr": [
     { name: "189 Skilled Independent Visa", path: "/pr-visas/australia-pr/189-skilled-independent-visa" },
     { name: "190 Skilled Nominated Visa", path: "/pr-visas/australia-pr/190-skilled-nominated-visa" },
-    { name: "191\tPermanent Residence (Skilled Regional) Visa", path: "/pr-visas/australia-pr/191-permanent-residence-visa" },
-    { name: "491\tSkilled Work Regional (Provisional) Visa", path: "/pr-visas/australia-pr/491-skilled-work-regional-visa" },
-    { name: "494\tSkilled Employer Sponsored Regional (Provisional) Visa", path: "/pr-visas/australia-pr/494-skilled-employer-sponsered-regional-visa" },
+    { name: "191 Permanent Residence (Skilled Regional) Visa", path: "/pr-visas/australia-pr/191-permanent-residence-visa" },
+    { name: "491 Skilled Work Regional (Provisional) Visa", path: "/pr-visas/australia-pr/491-skilled-work-regional-visa" },
+    { name: "494 Skilled Employer Sponsored Regional (Provisional) Visa", path: "/pr-visas/australia-pr/494-skilled-employer-sponsered-regional-visa" },
   ],
   "uk-pr": [
     { name: "Canada Permanent Residency Visa", path: "/pr-visas/canada-pr", image: "/1.jpg" },
@@ -115,6 +116,8 @@ const MigrateCountry = () => {
 
   return (
     <div className={`relative bg-cover bg-center bg-black/50 min-h-screen ${isImageLoaded ? "bg-loaded" : "bg-loading"}`}>
+      
+      {/* Hero Section */}
       <div
         className="relative flex flex-col lg:flex-row items-center justify-between p-10 gap-10 min-h-screen"
         style={{
@@ -123,26 +126,14 @@ const MigrateCountry = () => {
           backgroundPosition: "center",
         }}
       >
-        {/* Black Overlay */}
         <div className="absolute inset-0 bg-black/50 z-0"></div>
 
-        {/* FORM first on small, second on lg */}
-        <div className="relative z-10 w-full lg:w-1/2 lg:mr-16 lg:mt-14 order-1 lg:order-2">
-          <Form />
-        </div>
-
-        {/* HERO second on small, first on lg */}
-        <div className="relative z-10 w-full lg:w-1/2 lg:ml-16 mt-[-2rem] text-center lg:text-left order-2 lg:order-1">
-          <h1
-            className="font-semibold uppercase leading-tight text-white text-3xl sm:text-4xl md:text-5xl lg:text-[3.50rem] mt-20 sm:mt-12"
-            style={{ fontFamily: "Times New Roman, serif" }}
-          >
-            {country && typeof country === "string" ? country.charAt(0).toUpperCase() + country.slice(1) : ""}
+        {/* Content */}
+        <div className="relative z-10 w-full lg:w-1/2 lg:ml-16 order-1 lg:order-1 mt-[-2rem] text-center lg:text-left">
+          <h1 className="font-semibold uppercase leading-tight text-white text-3xl sm:text-4xl md:text-5xl lg:text-[3.50rem] mt-20 sm:mt-12" style={{ fontFamily: "Times New Roman, serif" }}>
+            {country.charAt(0).toUpperCase() + country.slice(1)}
           </h1>
-          <p
-            className="flex text-white tracking-tight text-center lg:text-left md:font-medium max-w-xl lg:max-w-lg mt-6 font-bold"
-            style={{ fontFamily: "Times New Roman, serif" }}
-          >
+          <p className="flex text-white tracking-tight text-center lg:text-left md:font-medium max-w-xl lg:max-w-lg mt-6 font-bold" style={{ fontFamily: "Times New Roman, serif" }}>
             Discover endless opportunities with our expert immigration services. Whether you’re looking to study or work abroad, we help make your dreams a reality.
           </p>
           <div className="mt-8 flex justify-center lg:justify-start">
@@ -156,22 +147,27 @@ const MigrateCountry = () => {
             </button>
           </div>
         </div>
+
+        {/* Form */}
+        <div className="relative z-10 w-full lg:w-1/2 lg:mr-16 lg:mt-14 order-2 lg:order-2">
+          <Form />
+        </div>
       </div>
 
+      {/* Two Layouts Only */}
       <div className="flex flex-col lg:flex-row bg-gradient-to-bl from-white to-orange-50 px-8 py-10 items-center lg:items-start">
-        {/* DETAILS first on small, second on lg */}
-        <div className="w-full lg:flex-1 ml-0 lg:ml-10 overflow-y-auto max-h-[1000px] px-8 rounded-xl shadow-md border border-gray-200 mt-8 lg:mt-0 order-1 lg:order-2">
+
+        {/* Content */}
+        <div className="w-full lg:flex-1 ml-0 lg:ml-10 overflow-y-auto max-h-[1000px] px-8 rounded-xl shadow-md border border-gray-200 order-1 lg:order-2 mt-8 lg:mt-0">
           {DefaultVisaComponent ? <DefaultVisaComponent /> : <p>Select a visa option to view details.</p>}
         </div>
 
-        {/* SIDEBAR (Visa options) — last on small, first on lg */}
+        {/* Visa Options */}
         <div className="w-full lg:w-[400px] flex-shrink-0 px-4 lg:pl-6 mb-8 lg:mb-0 order-2 lg:order-1">
-          <h2 className="text-3xl font-bold text-gray-800 bg-gradient-to-r from-orange-500 to-black bg-clip-text text-transparent mb-8 text-center">
-            Visa Options for {country && typeof country === "string" ? country.charAt(0).toUpperCase() + country.slice(1) : ""}
+          <h2 className="text-3xl font-bold text-gray-800 bg-gradient-to-r from-orange-500 to-black bg-clip-text text-transparent mb-8 text-center lg:text-left">
+            Visa Options for {country.charAt(0).toUpperCase() + country.slice(1)}
           </h2>
-
-          {/* Mobile Apply Now — make it last in the sidebar on small screens */}
-          <div className="mt-4 mb-10 flex justify-center lg:hidden order-last lg:order-none">
+          <div className=" mb-6 flex justify-center lg:hidden">
             <button
               type="button"
               onClick={() => setIsOpen(true)}
@@ -181,8 +177,7 @@ const MigrateCountry = () => {
               <span className="absolute top-0 left-[-100%] w-full h-full bg-white/30 animate-shine" />
             </button>
           </div>
-
-          <div className="flex flex-col gap-4 items-center">
+          <div className="flex flex-col gap-4 items-center lg:items-start">
             {visas.map(({ name, path }) => (
               <Link href={path} key={path} className="w-full sm:w-[350px] block">
                 <div
@@ -202,7 +197,11 @@ const MigrateCountry = () => {
       </div>
 
       {/* POPUP FORM */}
-      <ModalFormWithPopup isOpen={isOpen} setIsOpen={setIsOpen} customContent={<PRVisaContent />} />
+      <ModalFormWithPopup
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        customContent={<PRVisaContent />}
+      />
     </div>
   );
 };
