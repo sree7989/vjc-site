@@ -302,7 +302,7 @@ const WorkabroadCountry = () => {
         </div>
 
         {/* RIGHT SIDE: Content */}
-        <div className="order-1 lg:order-none lg:col-start-5 lg:col-span-8 w-full overflow-y-auto max-h-[800px] px-8 rounded-xl shadow-md border border-gray-200 mt-0 lg:mt-0">
+        <div className="order-1 lg:order-none lg:col-start-5 lg:col-span-8 w-full max-h-full lg:max-h-[800px] px-0 lg:px-8 rounded-xl shadow-md border border-gray-200 mt-4 lg:mt-0">
           {VisaComponent ? <VisaComponent /> : <p className="p-4">Select a visa option to view details.</p>}
         </div>
       </div>
