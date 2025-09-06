@@ -41,19 +41,13 @@ import Denpositivelist from "./Denmark-visa/Denpositivelist"
 import Denpaylimit from "./Denmark-visa/Denpaylimit"
 import Denworkemp from "./Denmark-visa/Denworkemp"
 
-
 import Standardwork from "./Dubai-visa/Standardwork";
 import Dubaigolden from "./Dubai-visa/Dubaigolden";
 import UAEwork from "./Dubai-visa/Standardwork";
 import Dubaigreen from "./Dubai-visa/Dubaigreen";
 import UAEtourist from "./Dubai-visa/UAE-tourist";
-
-
-
-
-
-
-
+import ModalFormWithPopup from "../../../Popup/Popup";
+import WorkAbroadContent from "../../../Popup/workabroad";
 
 const countryVisaData = {
   "germany-work-permit": [
@@ -72,12 +66,12 @@ const countryVisaData = {
     { name: "CANADA EXPRESS ENTRY", path: "/pr-visas/canada-pr/canada-express-entry" },
   ],
   "usa-h1b-visa": [
-    { name: "USA H1b Visa", path: "/work-abroad/usa-h1b-visa" }, 
+    { name: "USA H1b Visa", path: "/work-abroad/usa-h1b-visa" },
     { name: "USA Tourist Visa", path: "/migrate/united-states/tourist-visa" },
     { name: "USA Visit Visa", path: "/visit-visas/usa" },
     { name: "USA Investor Visa", path: "/investor-visas/usa" },
     { name: "USA Resume Marketing", path: "/resume-marketing/usa" },
-    ],
+  ],
   "australia-work-permit": [
     { name: "Temporary Skills 482 Visa", path: "/work-abroad/australia-work-permit/482-visa" },
     { name: "Employer 186 Visa", path: "/work-abroad/australia-work-permit/employer-186-visa" },
@@ -103,13 +97,10 @@ const countryVisaData = {
     { name: "Standard Work Visa", path: "/work-abroad/dubai-work-permit/dubai-standard-work-visa" },
     { name: "Green Visa", path: "/work-abroad/dubai-work-permit/dubai-green-visa" },
     { name: "Golden Visa", path: "/work-abroad/dubai-work-permit/dubai-golden-visa" },
-     { name: "Dubai Visit Visa", path: "/visit-visas/dubai" },
+    { name: "Dubai Visit Visa", path: "/visit-visas/dubai" },
     { name: "Study in Dubai", path: "/study-abroad/dubai" },
   ],
 };
-
-
-
 
 const visaComponents = {
   'germany-work-permit-opportunity-card': Goppcardvisa,
@@ -129,35 +120,30 @@ const visaComponents = {
   'united-kingdom-work-permit-uk-tire-2-visa':Tier2visa,
   'united-kingdom-work-permit-uk-skilled-worker-visa':Skilledworkvisa,
   'united-kingdom-work-permit-uk-health-and-care-worker-visa':Healthcare,
-  
+
   'australia-work-permit-482-visa':Aus482,
- 'australia-work-permit-working-holiday-417-visa':Aus417,
- 'australia-work-permit-nomited-visa-subclass-190':Aus190,
- 'australia-work-permit-employer-186-visa':Aus186,
- 'australia-work-permit-work-visa-subclass-189':Aus189,
+  'australia-work-permit-working-holiday-417-visa':Aus417,
+  'australia-work-permit-nomited-visa-subclass-190':Aus190,
+  'australia-work-permit-employer-186-visa':Aus186,
+  'australia-work-permit-work-visa-subclass-189':Aus189,
 
+  'hong-kong-student-visa':HKstudentvisa,
+  'hong-kong-employment-visa':HKemployee,
+  'hong-kong-business-visa':HKbusiness,
+  'hong-kong-tourist-visa':HKtourist,
+  'hong-kong-dependent-visa':HKdependent,
+  'hong-kong-work-visa':HKwork,
 
- 'hong-kong-student-visa':HKstudentvisa,
- 'hong-kong-employment-visa':HKemployee,
- 'hong-kong-business-visa':HKbusiness,
- 'hong-kong-tourist-visa':HKtourist,
- 'hong-kong-dependent-visa':HKdependent,
- 'hong-kong-work-visa':HKwork,
+  'denmark-work-permit-denmark-positive-list-visa':Denpositivelist,
+  'denmark-work-permit-denmark-employment-visa':Denworkemp,
+  'denmark-work-permit-denmark-pay-limit-scheme-visa': Denpaylimit,
+  'denmark-work-permit-denmark-trainee-visa':Dentrainee,
 
- 'denmark-work-permit-denmark-positive-list-visa':Denpositivelist,
- 'denmark-work-permit-denmark-employment-visa':Denworkemp,
- 'denmark-work-permit-denmark-pay-limit-scheme-visa': Denpaylimit,
- 'denmark-work-permit-denmark-trainee-visa':Dentrainee,
-
- 'dubai-work-permit-dubai-standard-work-visa':Standardwork,
- 'dubai-work-permit-dubai-golden-visa':Dubaigolden,
- 'uae-work-visa':UAEwork,
- 'dubai-work-permit-dubai-green-visa':Dubaigreen,
- 'uae-tourist-visa':UAEtourist,
-
-
-  
- 
+  'dubai-work-permit-dubai-standard-work-visa':Standardwork,
+  'dubai-work-permit-dubai-golden-visa':Dubaigolden,
+  'uae-work-visa':UAEwork,
+  'dubai-work-permit-dubai-green-visa':Dubaigreen,
+  'uae-tourist-visa':UAEtourist,
 };
 
 const defaultBackgroundImages = {
@@ -165,11 +151,9 @@ const defaultBackgroundImages = {
   canada: '/canadabgimg.jpg',
   "united-states": '/usabgimg.jpg',
   australia: '/australiabgimg.jpg',
-  // add other countries as needed
 };
 
-
- const visaBackgroundImages = {
+const visaBackgroundImages = {
   "/work-abroad/germany-work-permit/opportunity-card": "/vjc-gop.png",
   "/work-abroad/germany-work-permit/job-seeker-visa": "/vjc-gwvisa.jpg",
   "/work-abroad/germany-work-permit/blue-visa":"/germanybluecard.jpg",
@@ -180,9 +164,9 @@ const defaultBackgroundImages = {
   "/work-abroad/canada-work-permit/open-work-permit":"/canadaopen.webp",
   "/work-abroad/canada-work-permit/lmia":"/lmia.jpg",
   "/work-abroad/canada-work-permit/w1-visa":"/workpermitcanada.jpg",
-  
+
   "/work-abroad/usa-h1b-visa":"/USAh1b.png",
-  
+
   "/work-abroad/australia-work-permit/482-visa":"/ausworkabroad.webp",
   "/work-abroad/australia-work-permit/employer-186-visa":"/Employer186Visa.jpg",
   "/work-abroad/australia-work-permit/work-visa-subclass-189":"/SkilledIndependentWorkVisaSubclass189.jpg",
@@ -206,10 +190,7 @@ const defaultBackgroundImages = {
   "/work-abroad/dubai-work-permit/dubai-green-visa":"/greenvisaVisadubai.png",
   "/work-abroad/dubai-work-permit/dubai-golden-visa":"/nzdepend.jpg",
   "/work-abroad/dubai-work-permit/dubai-work-permit-visa":"/WorkPermitVisauk.jpeg",
-  
-  // If a visa path does not have a specific image, fallback to the country background.
 };
-
 
 const WorkabroadCountry = () => {
   const router = useRouter();
@@ -220,6 +201,7 @@ const WorkabroadCountry = () => {
 
   const [selectedVisaPath, setSelectedVisaPath] = useState(null);
   const [selectedVisaTitle, setSelectedVisaTitle] = useState(defaultVisaTitle);
+  const [isOpen, setIsOpen] = useState(false);
 
   const VisaComponent = visas
     ? visaComponents[`${country}-${visas}`]
@@ -233,9 +215,12 @@ const WorkabroadCountry = () => {
       if (matchedVisa) {
         setSelectedVisaTitle(matchedVisa.name);
         setSelectedVisaPath(matchedVisa.path);
+        return;
       }
     }
-  }, [visas, country, visasList]);
+    setSelectedVisaPath(null);
+    setSelectedVisaTitle(defaultVisaTitle);
+  }, [visas, country, visasList, defaultVisaTitle]);
 
   const currentBackgroundImage =
     (selectedVisaPath && visaBackgroundImages[selectedVisaPath]) ||
@@ -243,6 +228,7 @@ const WorkabroadCountry = () => {
 
   return (
     <div>
+      {/* HERO */}
       <div
         className="relative flex flex-col lg:flex-row items-center justify-between p-10 gap-10 min-h-screen"
         style={{
@@ -258,44 +244,75 @@ const WorkabroadCountry = () => {
           <p className="text-white mt-4 lg:mt-2 font-bold">
             Discover endless opportunities with our expert immigration services.
           </p>
+          <div className="mt-8 flex justify-center lg:justify-start">
+            <button
+              type="button"
+              onClick={() => setIsOpen(true)}
+              className="relative overflow-hidden bg-gradient-to-r from-sky-400 to-orange-500 text-white font-semibold py-2 px-6 rounded-full shadow-md hover:shadow-xl hover:scale-105 transition duration-300"
+            >
+              <span className="relative z-10">Apply Now</span>
+              <span className="absolute top-0 left-[-100%] w-full h-full bg-white/30 animate-shine" />
+            </button>
+          </div>
         </div>
+
         <div className="w-full lg:w-1/2 lg:mr-16">
           <Form />
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row bg-gradient-to-bl from-white to-orange-50 px-8 py-10">
-        <div className="w-full lg:w-[350px] flex-shrink-0 px-4 flex flex-col items-center">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-black bg-clip-text text-transparent mb-8 text-center">
+      {/* SECOND SECTION */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 bg-gradient-to-bl from-white to-orange-50 px-8 py-10">
+        
+        {/* LEFT SIDE: Heading + Buttons (stick together for lg) */}
+        <div className="order-2 lg:order-none lg:col-start-1 lg:col-span-4 flex flex-col items-center lg:items-start">
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-black bg-clip-text text-transparent mb-6 text-center lg:text-left">
             Visa Options for {country?.toUpperCase()}
           </h2>
+          <div className=" mb-6 flex justify-center lg:hidden">
+            <button
+              type="button"
+              onClick={() => setIsOpen(true)}
+              className="relative overflow-hidden bg-gradient-to-r from-sky-400 to-orange-500 text-white font-semibold py-2 px-6 rounded-full shadow-md hover:shadow-xl hover:scale-105 transition duration-300"
+            >
+              <span className="relative z-10">Apply Now</span>
+              <span className="absolute top-0 left-[-100%] w-full h-full bg-white/30 animate-shine" />
+            </button>
+          </div>
           <div className="flex flex-col gap-4 items-center w-full">
-           {visasList.map(({ name, path }) => {
-  const isSelected = selectedVisaPath === path;
-  return (
-    <Link
-      key={path}
-      href={path}
-      className={`w-full max-w-[320px] flex items-center justify-between text-sm sm:text-lg font-semibold 
-        border border-orange-500 px-4 sm:px-6 py-3 sm:py-4 rounded-xl shadow-md transition duration-300
-        ${isSelected 
-          ? 'bg-orange-500 text-white shadow-2xl'  // permanent "hover" style for selected
-          : 'bg-white text-black hover:shadow-2xl hover:bg-orange-500 hover:text-white' // default with hover
-        }`}
-    >
-      <span className=" cursor-pointer">{name}</span>
-      <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
-    </Link>
-  );
-})}
-
+            {visasList.map(({ name, path }) => {
+              const isSelected = selectedVisaPath === path;
+              return (
+                <Link
+                  key={path}
+                  href={path}
+                  className={`w-full max-w-[320px] flex items-center justify-between text-sm sm:text-lg font-semibold
+                    border border-orange-500 px-4 sm:px-6 py-3 sm:py-4 rounded-xl shadow-md transition duration-300
+                    ${isSelected
+                      ? 'bg-orange-500 text-white shadow-2xl'
+                      : 'bg-white text-black hover:shadow-2xl hover:bg-orange-500 hover:text-white'
+                    }`}
+                >
+                  <span className="cursor-pointer">{name}</span>
+                  <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
+                </Link>
+              );
+            })}
           </div>
         </div>
 
-        <div className="w-full lg:flex-1 overflow-y-auto max-h-[800px] px-8 rounded-xl shadow-md border border-gray-200 mt-8 lg:mt-0 lg:ml-9">
-          {VisaComponent ? <VisaComponent /> : <p>Select a visa option to view details.</p>}
+        {/* RIGHT SIDE: Content */}
+        <div className="order-1 lg:order-none lg:col-start-5 lg:col-span-8 w-full overflow-y-auto max-h-[800px] px-8 rounded-xl shadow-md border border-gray-200 mt-0 lg:mt-0">
+          {VisaComponent ? <VisaComponent /> : <p className="p-4">Select a visa option to view details.</p>}
         </div>
       </div>
+
+      {/* POPUP FORM */}
+      <ModalFormWithPopup
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        customContent={<WorkAbroadContent/>}
+      />
     </div>
   );
 };
