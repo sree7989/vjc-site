@@ -239,7 +239,7 @@ const WorkabroadCountry = () => {
       >
         <div className="w-full lg:w-1/2 flex flex-col lg:items-start items-center lg:text-left text-center mt-8 lg:mt-8 lg:ml-16">
           <h1 className="font-semibold uppercase bg-gradient-to-r from-white to-gray-500 inset-0 bg-black/60 bg-clip-text text-transparent text-4xl lg:text-6xl lg:mb-4 lg:mt-4">
-            {selectedVisaTitle}
+            {country === "germany-work-permit" ? `Germany ${selectedVisaTitle}` : selectedVisaTitle}
           </h1>
           <p className="text-white mt-4 lg:mt-2 font-bold">
             Discover endless opportunities with our expert immigration services.
