@@ -13,7 +13,7 @@ const GermanyWorkVisa = () => {
     >
       <h1 className="text-2xl font-bold mb-4">
         Germany Work Visa: Your Gateway to a Bright Future in Germany-{" "}
-        <span className="text-orange-500 font-bold"> VJC Overseas</span>
+        <span className="text-orange-500 font-bold"> VJC Oversea</span>
       </h1>
 
       <p className="mb-4 text-base">
