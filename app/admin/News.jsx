@@ -377,7 +377,7 @@ export default function AdminNews() {
                   onClick={() => handleEdit(n)}
                   className="bg-yellow-500 text-white px-3 py-1 rounded"
                 >
-                  ✏️ Edit
+                  ✏️ Edits
                 </button>
                 <button
                   onClick={() => handleDelete(n.slug)}
